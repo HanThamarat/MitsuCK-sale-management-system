@@ -7,7 +7,7 @@
                 <img src="{{ URL::asset('assets/images/svg/home-screen.svg') }}" class="w-[350px]" alt="">
             </div>
             <div class="w-full flex justify-center text-[20px] mt-5 font-primaryMedium">
-                <span class="text-red-500">Welcome to Insurance <span class="text-orange-500">Management System.</span></span>
+                <span class="text-red-500">Welcome to Car Sales <span class="text-orange-500">Management System.</span></span>
             </div>
             <div class="w-full justify-center flex my-5">
                 <div class="clock hidden" id="clock1">
