@@ -1,7 +1,7 @@
 <div class="bg-white md:flex gap-6 py-2 border-b-2 border-orange-500 border-dashed">
     <div class="container mx-auto px-4 flex justify-between items-center">
         <div class="font-primaryBold text-[20px] flex items-center gap-x-2">
-            <span class="text-white px-2 py-1 rounded-md bg-red-500">CK</span><span class="text-orange-500">Insurance</span>
+            <span class="text-white px-2 py-1 rounded-md bg-red-500">Mitsubishi</span><span class="text-orange-500">Car Sales</span>
         </div>
         <div>
             <x-dropdown align="right" width="48">

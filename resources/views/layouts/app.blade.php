@@ -17,7 +17,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-primaryRegular antialiased bg-gray-100">
+    <body class="font-primaryRegular text-[14px] antialiased bg-gray-100">
 
         @include('components.content-layout.topbar')
         @include('components.content-layout.navbar')
