@@ -29,8 +29,7 @@
           </button>
           <div class="dropdown-menu absolute hidden bg-white text-orange-500 drop-shadow-md px-2 pt-3 rounded-lg pb-2 w-48">
             <a href="{{ route('views.store') }}?page={{ 'create-customer' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">เพิ่มข้อมูลลูกค้า</a>
-            <a href="#" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">Development</a>
-            <a href="#" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">SEO</a>
+            <a href="{{ route('views.store') }}?page={{ 'customers' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">ข้อมูลลูกค้า</a>
           </div>
         </div>
         <a href="#" class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded">About</a>
