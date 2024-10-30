@@ -24,10 +24,19 @@
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    console.log(res);
+                    
+                    let cusId = res.cusId;
+                    setTimeout(() => {
+                        window.location.href = `{{ route('views.index') }}?page={{'customer-info'}}&cusId=${cusId}`;
+                    }, 2000);
                 },
                 error: function(err) {
-
+                    Swal.fire({
+                        icon: 'error',
+                        text: res.message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             })
         })
