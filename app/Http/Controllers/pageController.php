@@ -24,7 +24,12 @@ class pageController extends Controller {
                 return redirect()->route('views.index')->with('error', 'Oops! Page not found, are u looking for.');
             }
             return view('pages.content-customers.cus-info.view', compact('customers'));
+        } else if (@$page === 'create-acs-price') {
+            return view('pages.content-accessory.create-acs-price.view');
+        } else if (@$page === 'create-acs') {
+            return view('pages.content-accessory.create-acs.view');
         }
+
     }
 
     public function store(Request $req) {

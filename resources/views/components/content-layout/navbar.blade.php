@@ -1,5 +1,5 @@
 <nav class="bg-white text-orange-500">
-    <div class="container mx-auto px-4 md:flex items-center gap-6">
+    <div class="container mx-auto py-2 px-4 md:flex items-center gap-6">
       <!-- Logo -->
       <div class="flex items-center justify-between md:w-auto w-full">
         <!-- Mobile Menu Button -->
@@ -32,7 +32,23 @@
             <a href="{{ route('views.store') }}?page={{ 'customers' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">ข้อมูลลูกค้า</a>
           </div>
         </div>
-        <a href="#" class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded">About</a>
+        <div class="relative">
+          <button class="dropdown-toggle py-2 px-3 hover:bg-gray-700 hover:text-white flex items-center gap-2 rounded">
+            <span class="pointer-events-none">ประดับยนต์</span>
+            <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <title>chevron-down</title>
+              <g fill="none">
+                <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </button>
+          <div style="z-index: 100;" class="dropdown-menu absolute hidden bg-white text-orange-500 drop-shadow-md px-2 pt-3 rounded-lg pb-2 w-48">
+            <a href="{{ route('views.store') }}?page={{ 'create-acs' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">เพิ่มข้อมูลประดับยนต์</a>
+            <a href="{{ route('views.store') }}?page={{ 'create-acs-price' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">เพิ่มราคาประดับยนต์</a>
+            <a href="{{ route('views.store') }}?page={{ 'customers' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">ข้อมูลประดับยนต์</a>
+          </div>
+        </div>
+        {{-- <a href="#" class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded">About</a>
         <!-- Dropdown Menu -->
         <div class="relative">
           <button class="dropdown-toggle py-2 px-3 hover:bg-gray-700 hover:text-white flex items-center gap-2 rounded">
@@ -50,7 +66,7 @@
             <a href="#" class="block px-6 py-1 hover:bg-gray-600">SEO</a>
           </div>
         </div>
-        <a href="#" class="py-4 px-3 block">Contact</a>
+        <a href="#" class="py-4 px-3 block"></a> --}}
       </div>
     </div>
   </nav>
