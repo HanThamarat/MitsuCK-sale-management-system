@@ -24,7 +24,7 @@
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    
+
                     let cusId = res.cusId;
                     setTimeout(() => {
                         window.location.href = `{{ route('views.index') }}?page={{'customer-info'}}&cusId=${cusId}`;
@@ -38,8 +38,8 @@
                         timer: 1500
                     });
                 }
-            })
-        })
+            });
+        });
     })
 </script>
 @endsection
