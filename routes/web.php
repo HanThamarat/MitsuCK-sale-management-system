@@ -9,4 +9,5 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 
     // page router
     Route::resource('views', App\Http\Controllers\pageController::class);
+    Route::resource('customers', App\Http\Controllers\CusController::class);
 });
