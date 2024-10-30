@@ -40,7 +40,7 @@
                             @slot('data', [
                                     'lable' => 'Sign In',
                                     'btnName' => 'signIn',
-                                    'otherStyle' => 'bg-gradient-to-r from-orange-500 to-red-500 hover:drop-shadow-md hover:-translate-y-1 hover:scale-103 delay-150',
+                                    'otherStyle' => 'w-full bg-gradient-to-r from-orange-500 to-red-500 hover:drop-shadow-md hover:-translate-y-1 hover:scale-103 delay-150',
                                 ])
                         @endcomponent
                     </div>
