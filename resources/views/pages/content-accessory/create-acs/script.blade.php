@@ -23,6 +23,13 @@
                         showConfirmButton: false,
                         timer: 1500
                     });
+
+                    // reset values in the input field
+                    $("#acsData").serializeArray().map(function(d) {
+                        $('#' + d.name).val('');
+                    });
+                    
+                    $('#table-render').html(res.render).slideDown('slow');
                 },
                 error: function (err) {
                     Swal.fire({
@@ -33,7 +40,7 @@
                     });
                 }
             });
-        })
-    })
+        });
+    });
 </script>
 @endsection
