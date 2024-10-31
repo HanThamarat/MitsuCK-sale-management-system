@@ -14,24 +14,79 @@
             </button>
         </div>
         @component('components.content-card.full-card')
-           <form id="formData" class="w-full">
-                <div class="w-full flex justify-between gap-x-2">
-                    <div class="w-[25%]">
-
-                    </div>
-                    <div class="w-[75%]">
-                        @component('components.content-input.input-field')
+            <div class="w-full flex justify-between gap-x-2">
+                <div class="w-full">
+                    <form id="DataPricing">
+                        <div class="w-full grid grid-cols-3 gap-3">
+                            @component('components.content-input.select-option')
+                                @slot('data', [
+                                    "defaultOption" => "Accessorys",
+                                    "id" => "Accessorys_ID",
+                                    "name" => "Accessorys_ID"
+                                ])
+                                @foreach ($acs as $item)
+                                    <option value="{{ @$item->id }}">{{ @$item->AccessorySource }}</option>
+                                @endforeach
+                            @endcomponent
+                            @component('components.content-input.input-field')
+                                @slot('data', [
+                                    "label" => "ราคาทุน",
+                                    "id" => "AcsPrice",
+                                    "type" => "text",
+                                    "name" => "AcsPrice"
+                                ])
+                            @endcomponent
+                            @component('components.content-input.input-field')
+                                @slot('data', [
+                                    "label" => "Commission (Percentage)",
+                                    "id" => "Commission_Percent",
+                                    "type" => "text",
+                                    "name" => "Commission_Percent"
+                                ])
+                            @endcomponent
+                            @component('components.content-input.input-field')
+                                @slot('data', [
+                                    "label" => "Commission",
+                                    "id" => "Commission",
+                                    "type" => "text",
+                                    "name" => "Commission"
+                                ])
+                            @endcomponent
+                            @component('components.content-input.input-field')
+                                @slot('data', [
+                                    "label" => "วันทีเริ่ม",
+                                    "id" => "StartData",
+                                    "type" => "date",
+                                    "name" => "StartData"
+                                ])
+                            @endcomponent
+                            @component('components.content-input.input-field')
+                                @slot('data', [
+                                    "label" => "วันที่สิ้นสุด",
+                                    "id" => "EndDate",
+                                    "type" => "date",
+                                    "name" => "EndDate"
+                                ])
+                            @endcomponent
+                        </div>
+                    </form>
+                    <div class="w-full flex justify-end pt-2">
+                        @component('components.content-button.full-button')
                             @slot('data', [
-                                "label" => "ชื่อ",
-                                "id" => "firstName",
-                                "type" => "text",
-                                "name" => "firstName"
+                                'lable' => 'Create New Pricing',
+                                'btnName' => 'formData',
+                                'btnId' => 'formData',
+                                'btnType' => 'button',
+                                'otherStyle' => 'bg-gradient-to-r from-orange-500 to-red-500 hover:drop-shadow-md hover:-translate-y-1 hover:scale-103 delay-150 px-[50px]',
                             ])
                         @endcomponent
                     </div>
                 </div>
-           </form>
+            </div>
         @endcomponent
+        <div id="acsPrice" class="mt-4">
+            @include('pages.content-accessory.create-acs-price.list')
+        </div>
     </div> 
     @include('pages.content-accessory.create-acs-price.script')
 @endsection

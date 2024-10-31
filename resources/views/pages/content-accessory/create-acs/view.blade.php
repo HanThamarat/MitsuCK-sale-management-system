@@ -9,7 +9,17 @@
 
                     </div>
                     <div class="w-[75%]">
-                        <div class="grid grid-cols-2 gap-3 w-full">
+                        <div class="grid grid-cols-3 gap-3 w-full">
+                            @component('components.content-input.select-option')
+                                @slot('data', [
+                                    "defaultOption" => "Car Models",
+                                    "id" => "CarModel",
+                                    "name" => "CarModel"
+                                ])
+                                @foreach ($car as $item)
+                                    <option value="{{ @$item->id }}">{{ @$item->ToCarModel->Name_TH }}</option>
+                                @endforeach
+                            @endcomponent
                             @component('components.content-input.input-field')
                                 @slot('data', [
                                     "label" => "ชื่อประดับยนต์",
@@ -42,6 +52,10 @@
                 </div>
            </form>
         @endcomponent
+
+        <div class="mt-3" id="table-render">
+           @include('pages.content-accessory.create-acs.table')
+        </div>
     </div> 
     @include('pages.content-accessory.create-acs.script')
 @endsection

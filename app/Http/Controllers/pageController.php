@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\CONST\TB_PrefixName;
 use App\Models\DATA\Customers;
+use App\Models\DATA\ACS;
+use App\Models\DATA\CARS;
+use App\Models\DATA\AccessoryCosts;
 
 class pageController extends Controller {
     public function index(Request $req) {
@@ -25,9 +28,14 @@ class pageController extends Controller {
             }
             return view('pages.content-customers.cus-info.view', compact('customers'));
         } else if (@$page === 'create-acs-price') {
-            return view('pages.content-accessory.create-acs-price.view');
+            $acs = ACS::all();
+            $acsPrice = AccessoryCosts::all();
+            $AcsType = "Cost";
+            return view('pages.content-accessory.create-acs-price.view', compact('acs', 'acsPrice', 'AcsType'));
         } else if (@$page === 'create-acs') {
-            return view('pages.content-accessory.create-acs.view');
+            $acs = ACS::all();
+            $car = CARS::all();
+            return view('pages.content-accessory.create-acs.view', compact('acs', 'car'));
         }
 
     }
