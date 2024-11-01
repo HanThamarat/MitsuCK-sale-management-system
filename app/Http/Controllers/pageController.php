@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\CONST\TB_PrefixName;
+use App\Models\CONST\TB_CarColors;
+use App\Models\CONST\TB_CarYears;
+use App\Models\CONST\TB_CarModels;
+
 use App\Models\DATA\Customers;
 use App\Models\DATA\ACS;
 use App\Models\DATA\CARS;
 use App\Models\DATA\AccessoryCosts;
+use App\Models\DATA\CAR_COSTS;
 
 class pageController extends Controller {
     public function index(Request $req) {
@@ -36,8 +41,24 @@ class pageController extends Controller {
             $acs = ACS::all();
             $car = CARS::all();
             return view('pages.content-accessory.create-acs.view', compact('acs', 'car'));
+        } else if (@$page === 'create-car-model') {
+            $color = TB_CarColors::all();
+            $car = CARS::all();
+            return view('pages.content-car-stock.create-model.view', compact('color', 'car'));
+        } else if (@$page === 'create-car') {
+            $carModel = TB_CarModels::all();
+            $color = TB_CarColors::all();
+            $car = CARS::all();
+            return view('pages.content-car-stock.create-car.view', compact('carModel', 'color', 'car'));
+        } else if (@$page === 'car-pricing') {
+            $SaleType = 'Cost';
+            $carPrice = CAR_COSTS::all();
+            $car = CARS::all();
+            return view('pages.content-car-stock.car-pricing.view', compact('carPrice', 'SaleType', 'car'));
+        } else if (@$page === 'campaigns') {
+            $car = TB_CarModels::all();
+            return view('pages.content-car-stock.campaign.view', compact('car'));
         }
-
     }
 
     public function store(Request $req) {
