@@ -3,13 +3,13 @@
 @section('content')
     <div class="w-full">
         <div class="flex w-full justify-between gap-x-2 mb-2">
-            <button id="cost" class="w-full px-5 py-2 bg-orange-500 text-white rounded-lg">
+            <button id="cost" class="duration-100 ease-in-out w-full px-5 py-2 bg-orange-500 text-white rounded-lg">
                 <span>ราคาทุน</span>
             </button>
-            <button id="sale" class="w-full px-5 py-2 bg-white text-orange-500 rounded-lg">
+            <button id="sale" class="duration-100 ease-in-out w-full px-5 py-2 bg-white text-orange-500 rounded-lg">
                 <span>ราคาขาย</span>
             </button>
-            <button id="promo" class="w-full px-5 py-2 bg-white text-orange-500 rounded-lg">
+            <button id="promo" class="duration-100 ease-in-out w-full px-5 py-2 bg-white text-orange-500 rounded-lg">
                 <span>โปรโมชั่น</span>
             </button>
         </div>
@@ -32,7 +32,7 @@
                                 @slot('data', [
                                     "label" => "ราคาทุน",
                                     "id" => "AcsPrice",
-                                    "type" => "text",
+                                    "type" => "number",
                                     "name" => "AcsPrice"
                                 ])
                             @endcomponent
@@ -40,7 +40,7 @@
                                 @slot('data', [
                                     "label" => "Commission (Percentage)",
                                     "id" => "Commission_Percent",
-                                    "type" => "text",
+                                    "type" => "number",
                                     "name" => "Commission_Percent"
                                 ])
                             @endcomponent
@@ -48,7 +48,7 @@
                                 @slot('data', [
                                     "label" => "Commission",
                                     "id" => "Commission",
-                                    "type" => "text",
+                                    "type" => "number",
                                     "name" => "Commission"
                                 ])
                             @endcomponent

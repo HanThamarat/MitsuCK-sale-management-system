@@ -9,5 +9,5 @@ class TB_CarYears extends Model
 {
     use HasFactory;
     protected $table = 'TB_CarYears';
-    protected $fillable = ['Model_ID','Name_TH', 'Name_EN', 'Active'];
+    protected $fillable = ['Model_ID', 'year', 'Active'];
 }

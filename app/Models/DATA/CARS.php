@@ -24,6 +24,6 @@ class CARS extends Model
     }  
 
     public function ToCarYear() {
-        return $this->hasOne(TB_CarModels::class, 'id', 'Year_ID');
+        return $this->hasMany(TB_CarYears::class, 'id', 'Year_ID');
     }   
 }

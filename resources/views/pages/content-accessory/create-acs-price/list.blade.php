@@ -21,14 +21,14 @@
                         <td class="py-2">{{ @$key + 1 }}</td>
                         <td>{{ @$acs->ToAcs->AccessorySource }}</td>
                         @if (empty(@$condition) || @$condition === "1")
-                            <td>{{ @$acs->accessoryCost }}</td>
+                            <td>{{ number_format(@$acs->accessoryCost, 2) }}</td>
                         @elseif (@$condition === "2")
-                            <td>{{ @$acs->AccessorySalePrice }}</td>
+                            <td>{{ number_format(@$acs->AccessorySalePrice, 2) }}</td>
                         @elseif (@$condition === "3")
-                            <td>{{ @$acs->AccessoryPromoPrice }}</td>
+                            <td>{{ number_format(@$acs->AccessoryPromoPrice, 2) }}</td>
                         @endif
-                        <td>{{ @$acs->AccessoryCom }}</td>
-                        <td>{{ @$acs->AccessoryComAmount }}</td>
+                        <td>{{ @$acs->AccessoryCom }}%</td>
+                        <td>{{ number_format(@$acs->AccessoryComAmount, 2) }}</td>
                         <td>{{ @$acs->StartDate }}</td>
                         <td>{{ @$acs->EndDate }}</td>
                     </tr>

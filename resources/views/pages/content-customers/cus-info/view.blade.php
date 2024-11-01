@@ -56,6 +56,14 @@
                     <span class="text-[16px]">รายละเอียดลูกค้า (Customer Detail)</span>
                 </div>
             @endcomponent
+            <div class="mt-3">
+                @component('components.content-card.full-card')
+                    <div class="flex gap-x-2 items-center">
+                        <img src="{{ URL::asset('assets/images/gif/profile.gif') }}" class="w-[40px]" alt="">
+                        <span class="text-[16px]">รายละเอียดลูกค้า (Customer Detail)</span>
+                    </div>
+                @endcomponent
+            </div>
         </div>
     </div>
     @include('pages.content-customers.cus-info.script')

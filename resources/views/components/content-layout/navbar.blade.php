@@ -44,15 +44,12 @@
           </button>
           <div style="z-index: 100;" class="dropdown-menu absolute hidden bg-white text-orange-500 drop-shadow-md px-2 pt-3 rounded-lg pb-2 w-48">
             <a href="{{ route('views.store') }}?page={{ 'create-acs' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">เพิ่มข้อมูลประดับยนต์</a>
-            <a href="{{ route('views.store') }}?page={{ 'create-acs-price' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">เพิ่มราคาประดับยนต์</a>
-            <a href="{{ route('views.store') }}?page={{ 'customers' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">ข้อมูลประดับยนต์</a>
+            <a href="{{ route('views.store') }}?page={{ 'create-acs-price' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">ราคาประดับยนต์</a>
           </div>
         </div>
-        {{-- <a href="#" class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded">About</a>
-        <!-- Dropdown Menu -->
         <div class="relative">
           <button class="dropdown-toggle py-2 px-3 hover:bg-gray-700 hover:text-white flex items-center gap-2 rounded">
-            <span class="pointer-events-none">Services</span>
+            <span class="pointer-events-none">Car Stocks</span>
             <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <title>chevron-down</title>
               <g fill="none">
@@ -60,13 +57,13 @@
               </g>
             </svg>
           </button>
-          <div class="dropdown-menu absolute hidden bg-white text-orange-500 rounded-b-lg pb-2 w-48">
-            <a href="#" class="block px-6 py-1 hover:bg-gray-600">Web Design</a>
-            <a href="#" class="block px-6 py-1 hover:bg-gray-600">Development</a>
-            <a href="#" class="block px-6 py-1 hover:bg-gray-600">SEO</a>
+          <div style="z-index: 100;" class="dropdown-menu absolute hidden bg-white text-orange-500 drop-shadow-md px-2 pt-3 rounded-lg pb-2 w-48">
+            <a href="{{ route('views.store') }}?page={{ 'create-car-model' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">Add car models</a>
+            <a href="{{ route('views.store') }}?page={{ 'create-car' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">Add Cars</a>
+            <a href="{{ route('views.store') }}?page={{ 'car-pricing' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">Car Pricing</a>
+            <a href="{{ route('views.store') }}?page={{ 'campaigns' }}" class="block px-6 rounded-md py-1 hover:bg-gray-600 hover:text-white">Campaigns</a>
           </div>
         </div>
-        <a href="#" class="py-4 px-3 block"></a> --}}
       </div>
     </div>
   </nav>
